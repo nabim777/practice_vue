@@ -1,17 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- use that components with props having variable name,msg calls -->
+  <HomeSection
+    name="Myself Nalem7"
+    msg="I am learning Vue JS framework hai ta"
+  />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import
+import HomeSection from "./components/HomeSection.vue";
 
+// register
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // HelloWorld,
+    HomeSection,
+  },
+};
 </script>
 
 <style>
