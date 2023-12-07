@@ -1,12 +1,15 @@
 <template>
-    <h3>Sign Up</h3>
-    <div class="register">
-        <input type="text" placeholder="Enter Name">
-        <input type="text" placeholder="Enter Email">
-        <input type="text" placeholder="Enter Name">
-        <input type="password" placeholder="Create Password">
-        <input type="password" placeholder="Re-type Password">
-        <button>Sign up</button>
+    <div>
+        <img src="../assets/restrologo.png" class="logo" />
+        <h3>Sign Up</h3>
+        <div class="register">
+            <input type="text" placeholder="Enter Name">
+            <input type="text" placeholder="Enter Email">
+            <input type="text" placeholder="Enter Name">
+            <input type="password" placeholder="Create Password">
+            <input type="password" placeholder="Re-type Password">
+            <button>Sign up</button>
+        </div>
     </div>
 </template>
 
@@ -19,7 +22,7 @@ export default{
 
 <style>
 .logo{
-    height : 220px
+    height: 220px
   }
   
 .register input{

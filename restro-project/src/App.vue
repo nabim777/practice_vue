@@ -1,5 +1,4 @@
 <template>
-  <img src="./assets/restrologo.png" class="logo" />
   <SignUp/>
 </template>
 
