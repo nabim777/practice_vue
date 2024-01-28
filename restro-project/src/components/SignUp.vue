@@ -3,20 +3,47 @@
         <img src="../assets/restrologo.png" class="logo" />
         <h3>Sign Up</h3>
         <div class="register">
-            <input type="text" placeholder="Enter Name">
-            <input type="text" placeholder="Enter Email">
-            <input type="text" placeholder="Enter Name">
-            <input type="password" placeholder="Create Password">
-            <input type="password" placeholder="Re-type Password">
-            <button>Sign up</button>
+            <input type="text" v-model="name" placeholder="Enter Name">
+            <input type="text" v-model="email" placeholder="Enter Email">
+            <input type="password" v-model="password" placeholder="Password">
+            <button v-on:click="signUp">Sign up</button>
         </div>
     </div>
 </template>
 
 <script>
 
+import axios from "axios"
 export default{
-    name : 'SignUp'
+    name : 'SignUp',
+    data()
+    {
+        return {
+            name: '',
+            email: '',
+            password: ''
+        }
+    },
+    methods:{
+        async signUp()
+        {
+            console.warn("signUp",this.name,this.email,this.password)
+            let result= await axios.post("http://localhost:3000/user",
+            {
+                name: this.name,
+                email: this.email,
+                password: this.password
+            }
+            )
+            console.warn(result);
+            if(result.status == 201)
+            {
+                alert("Signup done")
+            }
+            // JSON.stringify just convert json into string
+            localStorage.setItem("user-info",JSON.stringify(result.data))
+        }
+    }
 }
 </script>
 
