@@ -39,9 +39,11 @@ export default{
             if(result.status == 201)
             {
                 alert("Signup done")
+                // JSON.stringify just convert json into string
+                localStorage.setItem("user-info",JSON.stringify(result.data))
+                //this will navigate to home.vue
+                this.$router.push({name:'Home'})
             }
-            // JSON.stringify just convert json into string
-            localStorage.setItem("user-info",JSON.stringify(result.data))
         }
     }
 }
