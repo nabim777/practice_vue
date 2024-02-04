@@ -1,0 +1,47 @@
+name: Run-project
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  run-Restro-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo code
+        uses: actions/checkout@v3
+
+      - name: pnpm install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: nvm install
+        shell: bash -l {0}
+        run: nvm install 18.17.1
+
+      - name: set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: run restro-project
+        run: |
+          cd restro-project
+          npm install
+          pnpm run build
+          npm run serve &
+          cd ..
+          npm install -g json-server
+          npx json-server db.json &
+
+      # - name: wait restro-project and json-server
+      #   run: |
+      #     sudo apt-get install wait-for-it -y
+      #     wait-for-it -h localhost -p 8080 -t 10
+      #     wait-for-it -h localhost -p 3000 -t 10
