@@ -19,4 +19,32 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.logo{
+    height: 220px
+  }
+  
+.register input, .login input{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid skyblue;
+}
+
+.register button, .login button{
+    width: 320px;
+    height: 40px;
+    border: 1px solid skyblue;
+    color: #fff;
+    background-color: skyblue;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.register button:hover, .login button:hover{
+    border: 1px solid rgb(15, 157, 201);
+    background-color: rgb(15, 157, 201);
+    cursor: pointer;
+}
 </style>
