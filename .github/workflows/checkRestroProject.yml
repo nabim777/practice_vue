@@ -40,7 +40,6 @@ jobs:
           npm install -g json-server
           npx json-server db.json &
 
-
       # - name: wait restro-project and json-server
       #   run: |
       #     sudo apt-get install wait-for-it -y
