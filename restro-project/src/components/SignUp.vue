@@ -45,6 +45,15 @@ export default{
                 this.$router.push({name:'Home'})
             }
         }
+    },
+    //mounted will load whenever page is loaded
+    mounted(){
+        //this will get the value from loaclstorage named user-info
+        let user = localStorage.getItem('user-info');
+        //if user is login then redirect homepage
+        if (user){
+            this.$router.push({name:'Home'})
+        }
     }
 }
 </script>
