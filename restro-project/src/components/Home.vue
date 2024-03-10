@@ -3,10 +3,9 @@
 </template>
 
 <script>
-import router from '@/routes';
 
 export default{
-    name: "Home",
+    name: "HomePage",
     //mounted run whenever the page is reloaded
     mounted(){
         let user = localStorage.getItem("user-info")
