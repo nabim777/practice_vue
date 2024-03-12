@@ -20,9 +20,11 @@ export default{
     //mounted run whenever the page is reloaded
     mounted(){
         let user = localStorage.getItem("user-info")
-        this.name = JSON.parse(user).name
         if (!user){
             this.$router.push({name:'SignUp'})
+        }
+        else{
+            this.name = JSON.parse(user).name
         }
     }
 }

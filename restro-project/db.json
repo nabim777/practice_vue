@@ -5,6 +5,12 @@
       "email": "nabinaale@gmail.com",
       "password": "@123",
       "id": 1
+    },
+    {
+      "name": "max",
+      "email": "max",
+      "password": "max",
+      "id": 2
     }
   ]
 }
