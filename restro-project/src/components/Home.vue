@@ -1,10 +1,25 @@
 <template>
     <Header></Header>
     <h1>Hello, {{ name }} Welcome on home Page</h1>
+    <table border="1px">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+        </tr>
+        <tr v-for="item in resturants" :key="item.id">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.address }}</td>
+            <td>{{ item.contact }}</td>
+        </tr>
+    </table>
 </template>
 
 <script>
 
+import axios from 'axios';
 import Header from './Header.vue'
 
 export default{
@@ -14,11 +29,12 @@ export default{
     },
     data() {
         return {
-            name: ''
+            name: '',
+            resturants: []
         }
     },
     //mounted run whenever the page is reloaded
-    mounted(){
+    async mounted(){
         let user = localStorage.getItem("user-info")
         if (!user){
             this.$router.push({name:'SignUp'})
@@ -26,6 +42,16 @@ export default{
         else{
             this.name = JSON.parse(user).name
         }
+        let result = await axios.get("http://localhost:3000/resturant");
+        this.resturants = result.data
     }
 }
 </script>
+
+<style>
+td{
+    width: 160px;
+    height: 40px;
+}
+
+</style>
