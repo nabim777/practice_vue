@@ -29,7 +29,7 @@ body{
     height: 220px
   }
   
-.register input, .login input{
+.register input, .login input, .add input{
     width: 300px;
     height: 40px;
     padding-left: 20px;
@@ -40,7 +40,7 @@ body{
     border: 1px solid skyblue;
 }
 
-.register button, .login button{
+.register button, .login button, .add button{
     width: 320px;
     height: 40px;
     border: 1px solid skyblue;
@@ -48,7 +48,7 @@ body{
     background-color: skyblue;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
-.register button:hover, .login button:hover{
+.register button:hover, .login button:hover, .add button:hover{
     border: 1px solid rgb(15, 157, 201);
     background-color: rgb(15, 157, 201);
     cursor: pointer;
