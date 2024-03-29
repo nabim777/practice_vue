@@ -11,6 +11,7 @@
 
 <script>
 import Header from './Header.vue'
+import axios from 'axios'
 
 export default{
     name: "Home",
@@ -30,11 +31,17 @@ export default{
 
     },
     //mounted run whenever the page is reloaded
-    mounted(){
+    async mounted(){
         let user = localStorage.getItem("user-info")
         if (!user){
             this.$router.push({name:'SignUp'})
         }
+        // since we have assign the id variable in the route.js for component update
+        // this.$route.params.id is an variable used for fetching the id from route url
+        // http://localhost:3000/resturant/1 will fetch the data having id 1
+        let $fullurl = "http://localhost:3000/resturant/" + this.$route.params.id
+        let result = await axios.get($fullurl)
+        this.resturant = result.data
     }
 }
 </script>
