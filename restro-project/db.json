@@ -19,6 +19,36 @@
       "address": "simalchour",
       "contact": 111,
       "id": 1
+    },
+    {
+      "name": "Puime",
+      "address": "Birauta",
+      "contact": 2344,
+      "id": 2
+    },
+    {
+      "name": "Myadi Resturant",
+      "address": "Damside",
+      "contact": 12233,
+      "id": 3
+    },
+    {
+      "name": "Station Resturant",
+      "address": "Chipledunga",
+      "contact": 12639893,
+      "id": 4
+    },
+    {
+      "name": "Syanjali momo huse",
+      "address": "Amersingh",
+      "contact": 2333,
+      "id": 5
+    },
+    {
+      "name": "Thicheko Alu",
+      "address": "buddha chowlk",
+      "contact": 52387,
+      "id": 6
     }
   ]
 }
