@@ -1,6 +1,6 @@
 <template>
  <div>
-        <img src="../assets/restrologo.png" class="logo" />
+        <img src="../assets/restrologo.png" class="logo" alt="resturant" />
         <h3>Login</h3>
         <div class="login">
             <input type="text" v-model="email" placeholder="Enter Name or email">
@@ -50,6 +50,3 @@ export default{
     }
 }
 </script>
-
-<style>
-</style>

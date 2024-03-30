@@ -2,6 +2,7 @@
     <Header></Header>
     <h1>Hello, {{ name }} Welcome on home Page</h1>
     <table border="1px">
+        <caption>Momo Resturant List</caption>
         <tr>
             <th>Id</th>
             <th>Name</th>
@@ -68,5 +69,9 @@ td, th{
     width: 160px;
     height: 40px;
 }
-
+caption {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px; 
+    }
 </style>
