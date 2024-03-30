@@ -32,7 +32,6 @@ jobs:
 
       - name: run restro-project
         run: |
-          cd restro-project
           npm install
           pnpm run build
           npm run serve &
