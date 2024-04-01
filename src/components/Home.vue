@@ -1,7 +1,7 @@
 <template>
     <Header></Header>
     <h1>Hello, {{ name }} Welcome on home Page</h1>
-    <table border="1px">
+    <table>
         <caption>Momo Resturant List</caption>
         <tr>
             <th>Id</th>
@@ -65,9 +65,46 @@ export default{
 </script>
 
 <style>
+table, td, th{
+    border-collapse: collapse;
+    text-align: left;
+    padding: 15px;
+    margin: 0 auto;
+}
+
 td, th{
     width: 160px;
     height: 40px;
+}
+
+th{
+    background-color: #04AA6D;
+    color:white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: skyblue;;
+    color: white;
+}
+
+td:first-child, th:first-child{
+    width: auto;
+}
+
+/* Add space between 'Update' and 'Delete' */
+button {
+    margin-left: 20px; /* Adjust margin as needed */
+    color: white;
+    background-color: rgb(216, 89, 89);;
+    border-color: rgb(216, 89, 89);;
+}
+
+button:hover {
+    background-color: red;
 }
 caption {
         font-size: 1.8em;
