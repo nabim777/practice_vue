@@ -65,7 +65,7 @@ export default{
 </script>
 
 <style>
-table, td, th{
+table, td, th {
     border-collapse: collapse;
     text-align: left;
     padding: 15px;
