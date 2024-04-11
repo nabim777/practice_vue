@@ -87,7 +87,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: skyblue;;
+    background-color: skyblue;
     color: white;
 }
 
@@ -99,8 +99,8 @@ td:first-child, th:first-child{
 button {
     margin-left: 20px; /* Adjust margin as needed */
     color: white;
-    background-color: rgb(216, 89, 89);;
-    border-color: rgb(216, 89, 89);;
+    background-color: rgb(216, 89, 89);
+    border-color: rgb(216, 89, 89);
 }
 
 button:hover {
